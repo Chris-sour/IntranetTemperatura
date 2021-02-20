@@ -1,0 +1,14 @@
+Executed SQL Statement : CREATE TABLE `tblexpense` (
+  `ID` int(10) NOT NULL AUTO_INCREMENT,
+  `UserId` int(10) NOT NULL,
+  `ExpenseDate` date DEFAULT NULL,
+  `ExpenseItem` varchar(200) DEFAULT NULL,
+  `ExpenseCost` varchar(200) DEFAULT NULL,
+  `NoteDate` timestamp NULL DEFAULT current_timestamp(),
+  `tos` varchar(200) NOT NULL,
+  `aire` varchar(200) NOT NULL,
+  `malestar` varchar(200) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1 
+Error Number : 1050 
+Error Message: Table 'tblexpense' already exists 
