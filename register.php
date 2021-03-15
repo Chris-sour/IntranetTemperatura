@@ -17,11 +17,11 @@ $msg="This email  associated with another account";
     else{
     $query=mysqli_query($con, "insert into tbluser(FullName, MobileNumber, Email,  Password) value('$fname', '$mobno', '$email', '$password' )");
     if ($query) {
-    $msg="You have successfully registered";
+    $msg="Se ha registrado exitosamente...";
   }
   else
     {
-      $msg="Something Went Wrong. Please try again";
+      $msg="Algo salió mal. Inténtalo de nuevo";
     }
 }
 }

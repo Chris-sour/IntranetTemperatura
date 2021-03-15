@@ -10,14 +10,16 @@ if (strlen($_SESSION['detsuid']==0)) {
     $userid=$_SESSION['detsuid'];
     $fullname=$_POST['fullname'];
   $mobno=$_POST['contactnumber'];
+  $Area=$_POST['Area'];
 
-     $query=mysqli_query($con, "update tbluser set FullName ='$fullname', MobileNumber='$mobno' where ID='$userid'");
+     $query=mysqli_query($con, "update tbluser set FullName ='$fullname', MobileNumber='$mobno',Area='$Area' where ID='$userid'");
     if ($query) {
-    $msg="User profile has been updated.";
+    $msg="El perfil de usuario se ha actualizado.";
   }
   else
     {
-      $msg="Something Went Wrong. Please try again.";
+      $msg="
+Algo salió mal. Inténtalo de nuevo.";
     }
   }
   ?>
@@ -93,9 +95,36 @@ while ($row=mysqli_fetch_array($ret)) {
 									<label>Registration Date</label>
 									<input class="form-control" name="regdate" type="text" value="<?php  echo $row['RegDate'];?>" readonly="true">
 								</div>
+								<div class="form-group">
+								<label>Area</label>
+								<select  class='form-control' name="Area" type='text' value="<?php  echo $row['Area'];?>" >
+								<option>Elija su area de trabajo :</option>
+								<br>
+								<option class="col-md-6" value="ARCHIVO">ARCHIVO</option>
+								<option class="col-md-6" value="ATENCION AL PACIENTE">ATENCION AL PACIENTE</option>
+								<option class="col-md-6" value="CENTRAL TELEFONICA">CENTRAL TELEFONICA</option>
+								<option class="col-md-6" value="CENTRO QUIRURGICO">CENTRO QUIRURGICO</option>
+								<option class="col-md-6" value="COCINA">COCINA</option>
+								<option class="col-md-6" value="CONTABILIDAD">CONTABILIDAD</option>
+								<option class="col-md-6" value="DROGUERIA">DROGUERIA</option>
+								<option class="col-md-6" value="EMERGENCIA">EMERGENCIA</option>
+								<option class="col-md-6" value="FARMACIA">FARMACIA</option>
+								<option class="col-md-6" value="GERENCIA DE ADMINISTRACIÓN Y FINANZAS">GERENCIA DE ADMINISTRACIÓN Y FINANZAS</option>
+								<option class="col-md-6" value="GERENCIA DE SALUD Y OPERACIONES">GERENCIA DE SALUD Y OPERACIONES</option>
+								<option class="col-md-6" value="GERENCIA GENERAL">GERENCIA GENERAL</option>
+								<option class="col-md-6" value="HOSPITALIZACION">HOSPITALIZACION</option>
+								<option class="col-md-6" value="LIMPIEZA">LIMPIEZA</option>
+								<option class="col-md-6" value="MARKETING">MARKETING</option>
+								<option class="col-md-6" value="PROYECTO HIS">PROYECTO HIS</option>
+								<option class="col-md-6" value="RAYOS X">RAYOS X</option>
+								<option class="col-md-6" value="RECURSOS HUMANOS">RECURSOS HUMANOS</option>
+								<option class="col-md-6" value="SISTEMAS">SISTEMAS</option>
+								<option class="col-md-6" value="TOPICO">TOPICO</option>
+								</select>
+								</div>
 								
 								<div class="form-group has-success">
-									<button type="submit" class="btn btn-primary" name="submit">Update</button>
+									<button type="submit" class="btn btn-primary" name="submit">Actualizar</button>
 								</div>			
 								</div>
 								<?php } ?>

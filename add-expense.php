@@ -18,8 +18,7 @@ if(isset($_POST['submit']))
     $query=mysqli_query($con, "insert into tblexpense(UserId,ExpenseDate,ExpenseItem,ExpenseCost,tos,aire,malestar) value('$userid','$dateexpense','$item','$costitem','$tos','$aire','$malestar')");
 if($query){
 echo "<script>alert('Registro agregado correctamente');</script>";
-/**cambio de archivo de redireccion */
-echo "<script>window.location.href='manage-registro.php'</script>";
+echo "<script>window.location.href='manage-expense.php'</script>";
 } else {
 echo "<script>alert('Algo salio mal , intentalo de nuevo');</script>";
 

@@ -1,0 +1,2 @@
+alter table tbluser
+  add Area varchar (50) not null

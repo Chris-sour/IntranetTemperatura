@@ -12,10 +12,10 @@ if(isset($_GET['delid']))
 $rowid=intval($_GET['delid']);
 $query=mysqli_query($con,"delete from tblexpense where ID='$rowid'");
 if($query){
-echo "<script>alert('Record successfully deleted');</script>";
+echo "<script>alert('Registro eliminado correctamente');</script>";
 echo "<script>window.location.href='manage-expense.php'</script>";
 } else {
-echo "<script>alert('Something went wrong. Please try again');</script>";
+echo "<script>alert('Algo salió mal. Inténtalo de nuevo');</script>";
 
 }
 
@@ -25,8 +25,8 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
+<head><meta charset="windows-1252">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Intranet || CEM</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -76,7 +76,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
               <thead>
                 <tr>
                   <th>Secuencia</th>
-                  <th>Temperatura(Â°)</th>
+                  <th>Temperatura(¡Æ)</th>
                   <th>Observacion</th>
 				  <th>Fecha </th>
 				  <th>Tos</th>

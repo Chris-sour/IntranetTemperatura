@@ -20,8 +20,8 @@ if(isset($_POST['login']))
   ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
+<head><meta charset="euc-jp">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Intranet - CEM </title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@ if(isset($_POST['login']))
 							</div>
 							<div class="checkbox">
 								<button type="submit" value="login" name="login" class="btn btn-primary">login</button><span style="padding-left:250px">
-								<a href="register.php" class="btn btn-primary">Register</a></span>
+						 	<!--  	<a href="register.php" class="btn btn-primary">Register</a></span>  -->
 							</div>
 							</fieldset>
 					</form>
