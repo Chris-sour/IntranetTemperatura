@@ -9,8 +9,8 @@ if (strlen($_SESSION['detsuid']==0)) {
   {
     $userid=$_SESSION['detsuid'];
     $fullname=$_POST['fullname'];
-  $mobno=$_POST['contactnumber'];
-  $Area=$_POST['Area'];
+  	$mobno=$_POST['contactnumber'];
+  	$Area=$_POST['Area'];
 
      $query=mysqli_query($con, "update tbluser set FullName ='$fullname', MobileNumber='$mobno',Area='$Area' where ID='$userid'");
     if ($query) {
@@ -96,10 +96,14 @@ while ($row=mysqli_fetch_array($ret)) {
 									<input class="form-control" name="regdate" type="text" value="<?php  echo $row['RegDate'];?>" readonly="true">
 								</div>
 								<div class="form-group">
-								<label>Area</label>
+									<label>Su area de trabajo es :</label>
+									<input class="form-control" name="Area" type="text" value="<?php  echo $row['Area'];?>" readonly="true">
+								</div>
+								<div class="form-group">
+								<label>Seleccione para Actualizar Area</label>
 								<select  class='form-control' name="Area" type='text' value="<?php  echo $row['Area'];?>" >
 								<option>Elija su area de trabajo :</option>
-								<br>
+								<br>	
 								<option class="col-md-6" value="ARCHIVO">ARCHIVO</option>
 								<option class="col-md-6" value="ATENCION AL PACIENTE">ATENCION AL PACIENTE</option>
 								<option class="col-md-6" value="CENTRAL TELEFONICA">CENTRAL TELEFONICA</option>
